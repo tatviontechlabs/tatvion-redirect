@@ -272,8 +272,15 @@
   </div>
   
   <script>
-    // Immediate redirect - no delays
+    // Immediate redirect
     window.location.replace("https://www.tatvion.com/");
+    
+    // Fallback redirect after 3 seconds
+    setTimeout(function() {
+      if (window.location.href !== "https://www.tatvion.com/") {
+        window.location.href = "https://www.tatvion.com/";
+      }
+    }, 3000);
   </script>
   
   <!-- Hidden content for SEO (search engines can read this) -->
